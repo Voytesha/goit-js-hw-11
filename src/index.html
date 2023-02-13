@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <title>Homework js 11</title>
+      
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+
+    <form class="search-form" id="search-form">
+      <input type="text" 
+      name="searchQuery" 
+      autocomplete="off" 
+      placeholder="Search images..." 
+      style="height: 100%;" 
+      />
+      <button type="submit" style="height: 100%;">🔍</button>
+    </form>
+    
+    <div class="gallery">
+      <!-- Карточки изображений -->
+    </div>
+    <button type="button" id="load-more" class="hidden">Load more</button>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
