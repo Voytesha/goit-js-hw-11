@@ -4,9 +4,6 @@ import axios from 'axios';
 import SimpleLightbox from "simplelightbox";
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-
-
-
 const refs = {
   form: document.querySelector('.search-form'),
   gallery: document.querySelector('.gallery'),
@@ -67,7 +64,7 @@ async function submitHandler(e) {
       smoothScroll();
       window.addEventListener('scroll', checkPosition);
     };
-    lightBox.refresh();
+    watchGallery.refresh();
   } catch (error) {};
 }
 
@@ -90,7 +87,7 @@ async function loadMorehandler() {
         response.data.hits.map(picture => renderPicture(picture)).join('')
       );
       pagesLeft -= PER_PAGE;
-      lightBox.refresh();
+      watchGallery.refresh();
     } catch (error) {};
   }
 }
@@ -117,8 +114,8 @@ function renderPicture(picture) {
   `;
 }
 
-const lightBox = new SimpleLightbox('.gallery a', {
-   captions: true,
+const watchGallery = new SimpleLightbox('.gallery a', {
+    captions: true,
     captionsData: 'alt',
     captionDelay: 250,
 });

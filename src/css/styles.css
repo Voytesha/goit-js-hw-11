@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #586cad;
+    background-color: #10297b;
     padding: 15px;
 
 }
@@ -29,7 +29,7 @@
 .photo-card {
     width: 270px;
     height: 215px;
-    border: 1px solid #586cad;
+    border: 1px solid #133eca;
     border-radius: 3px;
     overflow: hidden;
 
